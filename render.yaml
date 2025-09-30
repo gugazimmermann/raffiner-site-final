@@ -1,12 +1,10 @@
 services:
-  - type: web
+  - type: static
     name: site-raffiner
-    env: node
     plan: free
-    buildCommand: npm ci && npm run build
-    startCommand: npm run start
+    buildCommand: npm ci && npm run build:static
+    staticPublishPath: ./build/client
     envVars:
       - key: NODE_ENV
         value: production
-    healthCheckPath: /
     autoDeploy: true
