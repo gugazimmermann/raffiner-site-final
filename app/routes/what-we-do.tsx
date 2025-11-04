@@ -25,8 +25,8 @@ export default function WhatWeDo() {
           "Louças lindas, sem precisar comprar nada.",
           "Louças, talheres, taças, sousplats, jogos americanos e muito mais. Itens exclusivos, selecionados com bom gosto e qualidade."
         ]}
-        imageIcon={SVG_ICONS.box}
-        imageText="Foto das louças"
+        image="/photos/rental.jpeg"
+        imageAlt="Foto das louças"
         background="white"
       >
         <div className="bg-[rgb(221_218_212)] rounded-2xl p-6 mb-6">
@@ -52,8 +52,8 @@ export default function WhatWeDo() {
           "Composições pensadas com exclusividade, sob medida para seu momento.",
           "Transformamos o ambiente com composições personalizadas. Participamos também restaurantes e buffets, com serviço de montagem no local."
         ]}
-        imageIcon={SVG_ICONS.grid}
-        imageText="Foto da montagem"
+        image="/photos/setup.jpeg"
+        imageAlt="Foto da montagem"
         background="gradient"
         reverse={true}
       >
@@ -76,8 +76,8 @@ export default function WhatWeDo() {
           "Celebrações intimistas com charme e zero preocupação.",
           "Chás, aniversários, almoços em casa ou celebrações afetivas. Cuidamos de tudo para que você aproveite cada momento."
         ]}
-        imageIcon={SVG_ICONS.calendar}
-        imageText="Foto de evento organizado"
+        image="/photos/event.jpeg"
+        imageAlt="Foto de evento organizado"
         background="white"
       >
         <SocialButton 
@@ -95,8 +95,8 @@ export default function WhatWeDo() {
           "Compartilhamos o que vivemos: bom gosto, acolhimento e beleza.",
           "Workshops presenciais, mentorias individuais, treinamentos para equipes (copeiras, garçons, atendimento) e empresas (etiqueta corporativa)."
         ]}
-        imageIcon={SVG_ICONS.book}
-        imageText="Foto do curso"
+        image="/photos/course.jpeg"
+        imageAlt="Foto do curso"
         background="gradient"
         reverse={true}
       >

@@ -35,8 +35,12 @@ export const OptimizedImage = memo(function OptimizedImage({
     setHasError(true);
   }, []);
 
+  // Default styles if no className provided
+  const defaultImageStyles = "w-full h-full object-cover";
+  const imageStyles = className || defaultImageStyles;
+
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    <div className="relative overflow-hidden">
       {!isLoaded && !hasError && (
         <Skeleton 
           variant="rectangular" 
@@ -65,9 +69,9 @@ export const OptimizedImage = memo(function OptimizedImage({
           sizes={sizes}
           onLoad={handleLoad}
           onError={handleError}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
+          className={`transition-opacity duration-300 ${
             isLoaded ? "opacity-100" : "opacity-0"
-          }`}
+          } ${imageStyles}`}
           decoding="async"
           fetchPriority={priority ? "high" : "auto"}
         />

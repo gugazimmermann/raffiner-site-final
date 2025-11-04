@@ -1,11 +1,14 @@
 import type { ReactNode } from "react";
 import { ImagePlaceholder } from "./ImagePlaceholder";
+import { OptimizedImage } from "./OptimizedImage";
 
 interface ContentSectionProps {
   title: string;
   description: string | string[];
   imageIcon?: string;
   imageText?: string;
+  image?: string;
+  imageAlt?: string;
   background?: "gradient" | "white";
   reverse?: boolean;
   className?: string;
@@ -17,6 +20,8 @@ export function ContentSection({
   description,
   imageIcon,
   imageText,
+  image,
+  imageAlt,
   background = "white",
   reverse = false,
   className = "",
@@ -28,13 +33,31 @@ export function ContentSection({
 
   const descriptions = Array.isArray(description) ? description : [description];
 
+  const renderImage = () => {
+    if (image) {
+      return (
+        <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20 w-full">
+          <OptimizedImage
+            src={image}
+            alt={imageAlt || imageText || title}
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      );
+    }
+    if (imageIcon && imageText) {
+      return <ImagePlaceholder icon={imageIcon} text={imageText} />;
+    }
+    return null;
+  };
+
+  const imageElement = renderImage();
+
   return (
     <section className={`py-20 px-4 ${backgroundClass} ${className}`}>
       <div className="container mx-auto">
         <div className={`grid lg:grid-cols-2 gap-12 items-center ${reverse ? 'lg:grid-flow-col-dense' : ''}`}>
-          {!reverse && imageIcon && imageText && (
-            <ImagePlaceholder icon={imageIcon} text={imageText} />
-          )}
+          {!reverse && imageElement}
           
           <div className={reverse ? 'lg:col-start-2' : ''}>
             <h2 className="text-3xl font-bold text-gray-800 mb-6">{title}</h2>
@@ -46,8 +69,10 @@ export function ContentSection({
             {children}
           </div>
 
-          {reverse && imageIcon && imageText && (
-            <ImagePlaceholder icon={imageIcon} text={imageText} className="lg:col-start-1" />
+          {reverse && imageElement && (
+            <div className="lg:col-start-1">
+              {imageElement}
+            </div>
           )}
         </div>
       </div>
