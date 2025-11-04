@@ -1,7 +1,6 @@
 import { Layout } from "../components/Layout";
-import { HeroSection, FeatureCard, ImagePlaceholder } from "../components/ui";
+import { HeroSection, FeatureCard, OptimizedImage } from "../components/ui";
 import { COMPANY_VALUES } from "../lib/constants";
-import { SVG_ICONS } from "../lib/icons";
 
 export function meta() {
   return [
@@ -39,10 +38,14 @@ export default function AboutUs() {
                 Hoje, a marca é reconhecida por criar experiências sofisticadas, afetivas e inesquecíveis.
               </p>
             </div>
-            <ImagePlaceholder 
-              icon={SVG_ICONS.user}
-              text="Foto da Renata"
-            />
+            <div className="rounded-2xl h-96 overflow-hidden shadow-2xl border border-white/20">
+              <OptimizedImage
+                src="/photos/about-us.jpeg"
+                alt="Foto da Renata"
+                className="w-full h-full"
+                priority={true}
+              />
+            </div>
           </div>
         </div>
       </section>
