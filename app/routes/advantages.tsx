@@ -1,8 +1,7 @@
 import { Layout } from "../components/Layout";
-import { Button, HeroSection, FeatureCard, CTASection, SocialButton, ImagePlaceholder } from "../components/ui";
+import { Button, HeroSection, FeatureCard, CTASection, SocialButton, OptimizedImage } from "../components/ui";
 import { YouTubeVideosSection } from "../components/ui/YouTubeVideosSection";
 import { SOCIAL_LINKS, COMPANY_ADVANTAGES } from "../lib/constants";
-import { SVG_ICONS } from "../lib/icons";
 
 export function meta() {
   return [
@@ -40,10 +39,14 @@ export default function Advantages() {
       <section className="py-20 px-4 bg-gradient-to-br from-[rgb(240_238_235)] via-[rgb(221_218_212)] to-[rgb(200_197_192)]">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <ImagePlaceholder 
-              icon={SVG_ICONS.image}
-              text="Imagem emocional"
-            />
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20 w-full">
+              <OptimizedImage
+                src="/photos/advantages.jpeg"
+                alt="Imagem emocional"
+                className="w-full h-auto object-contain"
+                priority={true}
+              />
+            </div>
             <div>
               <h2 className="text-3xl font-bold text-gray-800 mb-6">Mais que um serviço, uma experiência</h2>
               <p className="text-lg text-gray-600 mb-6">
