@@ -36,7 +36,7 @@ export default function Home() {
                   className="shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
                 />
                 <Button 
-                  href="https://alugueraffiner.estoquenow.site/"
+                  href="https://www.alugueraffiner.com.br/"
                   external
                   variant="outline"
                   size="lg"

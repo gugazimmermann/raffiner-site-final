@@ -33,7 +33,7 @@ export default function WhatWeDo() {
           <p className="text-2xl font-bold text-[rgb(63_9_22)]">Valores a partir de R$ 1,00 por item</p>
         </div>
         <Button 
-          href="https://alugueraffiner.estoquenow.site/"
+          href="https://www.alugueraffiner.com.br/"
           external
           variant="primary"
           size="lg"

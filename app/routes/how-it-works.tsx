@@ -122,7 +122,7 @@ export default function HowItWorks() {
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
-            href="https://www.estoquenow.com.br/raffiner"
+            href="https://www.alugueraffiner.com.br/"
             external
             variant="primary"
             size="lg"

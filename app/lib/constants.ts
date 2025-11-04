@@ -38,7 +38,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
       { path: "/como-funciona", label: "Como Funciona" },
     ]
   },
-  { path: "https://alugueraffiner.estoquenow.site/", label: "Catálogo", external: true },
+  { path: "https://www.alugueraffiner.com.br/", label: "Catálogo", external: true },
   { path: "/seja-um-parceiro", label: "Parceiros" },
   { path: "/faq", label: "FAQ" },
   { path: "/contato", label: "Contato" },
