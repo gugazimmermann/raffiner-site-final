@@ -1,5 +1,5 @@
 import { Layout } from "../components/Layout";
-import { Button, HeroSection, CTASection, SocialButton } from "../components/ui";
+import { Button, HeroSection, CTASection, SocialButton, ImageCarousel } from "../components/ui";
 import { LatestYouTubeVideo } from "../components/ui/LatestYouTubeVideo";
 import { SOCIAL_LINKS } from "../lib/constants";
 import { SVG_ICONS } from "../lib/icons";
@@ -46,14 +46,17 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-[rgb(240_238_235)] via-[rgb(221_218_212)] to-[rgb(200_197_192)] rounded-2xl h-96 flex items-center justify-center shadow-2xl border border-white/20">
-              <div className="text-center">
-                <svg className="w-24 h-24 text-[rgb(63_9_22)] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={SVG_ICONS.image} />
-                </svg>
-                <p className="text-gray-600 font-medium">Imagem de uma mesa linda em destaque</p>
-              </div>
-            </div>
+            <ImageCarousel
+              images={[
+                "/photos/home-1.jpeg",
+                "/photos/home-2.jpeg",
+                "/photos/home-3.jpeg",
+                "/photos/home-4.jpeg",
+              ]}
+              alt="Mesa linda em destaque"
+              autoPlay={true}
+              autoPlayInterval={5000}
+            />
           </div>
         </div>
       </section>

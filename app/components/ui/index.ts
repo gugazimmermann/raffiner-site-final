@@ -5,6 +5,7 @@ export { ContentSection } from "./ContentSection";
 export { FeatureCard } from "./FeatureCard";
 export { HeroSection } from "./HeroSection";
 export { Icon } from "./Icon";
+export { ImageCarousel } from "./ImageCarousel";
 export { ImagePlaceholder } from "./ImagePlaceholder";
 export { InstagramReelsSection } from "./InstagramReelsSection";
 export { LazySection } from "./LazySection";
